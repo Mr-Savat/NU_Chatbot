@@ -65,3 +65,9 @@ async def serve_frontend(path: str = ""):
         return FileResponse(file_path)
 
     return FileResponse(os.path.join(frontend_path, "index.html"))
+
+# For local run or Render deployment
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.getenv("PORT", 8000))  # Render provides PORT
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
