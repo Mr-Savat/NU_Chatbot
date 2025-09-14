@@ -6,6 +6,7 @@ __pycache__/
 venv/
 env/
 *.sqlite3
+*.zip
 
 # GPT-2 model
 backend/gpt2-norton/

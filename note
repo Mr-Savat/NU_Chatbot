@@ -1,0 +1,23 @@
+uvicorn backend.app:app --reload --host 0.0.0.0 --port 5000
+🔹 Explanation:
+
+backend.app:app → first app = folder name, second app = FastAPI object inside app.py.
+
+--reload → auto-reload when you change code.
+
+--host 0.0.0.0 → makes server accessible from anywhere (good for deploy).
+
+--port 5000 → runs on port 5000.
+
+
+
+uvicorn backend.app:app --reload --host 0.0.0.0 --port 5000
+uvicorn app:app --reload --host 0.0.0.0 --port 5000
+
+
+
+You can open your browser and test it at:
+👉 http://127.0.0.1:5000
+
+Or if you’re testing APIs, check the interactive docs that FastAPI generates automatically:
+👉 http://127.0.0.1:5000/docs
